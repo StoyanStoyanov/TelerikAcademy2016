@@ -1,6 +1,6 @@
-﻿namespace Ex05PrintNumbers
+﻿namespace Ex06PrintNumbers
 {
-    // 05. Write a program that prints the numbers 1, 101 and 1001, each on a separate line.
+    // 06. Write a program that prints the numbers 1, 101 and 1001, each on a separate line.
 
     using System;
 
