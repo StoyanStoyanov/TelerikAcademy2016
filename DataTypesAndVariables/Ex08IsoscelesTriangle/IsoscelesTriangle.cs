@@ -22,7 +22,7 @@
 
             var n = 9;
             var sign = '\u00A9';
-            var space = ' ';
+            var backgroundSign = ' ';
 
             var rows = n / 3 + 1;
             var cols = (n / 3) * 2 + 1;
@@ -38,7 +38,7 @@
             {
                 for (int col = 0; col < cols; col++)
                 {
-                    output.Append(col == left || col == right ? sign : space);
+                    output.Append(col == left || col == right ? sign : backgroundSign);
                 }
 
                 output.AppendLine();
@@ -49,7 +49,7 @@
             // add the base
             for (int col = 0; col < cols; col++)
             {
-                output.Append(col % 2 == 0 ? sign : space);
+                output.Append(col % 2 == 0 ? sign : backgroundSign);
             }
         
             Console.WriteLine(output);
