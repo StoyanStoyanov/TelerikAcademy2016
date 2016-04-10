@@ -14,9 +14,9 @@
         {
             var weightOnEarth = double.Parse(Console.ReadLine());
 
-            var weightOnMoon = Math.Round((weightOnEarth * 17) / 100, 3);
+            var weightOnMoon = 0.17 * weightOnEarth;
 
-            Console.WriteLine(weightOnMoon);
+            Console.WriteLine("{0:F3}", weightOnMoon);
         }
     }
 }
