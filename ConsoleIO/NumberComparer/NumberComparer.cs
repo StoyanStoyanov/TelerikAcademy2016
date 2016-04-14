@@ -1,4 +1,4 @@
-﻿// 04. Write a program that gets two numbers from the console and prints the greater of them.
+﻿// 05. Write a program that gets two numbers from the console and prints the greater of them.
 // On the only line print the larger of the two numbers
 // * Try implementing it without using if-statements
 
