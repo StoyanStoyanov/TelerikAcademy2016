@@ -1,6 +1,7 @@
 ﻿namespace Task01Printing
 {
     // http://bgcoder.com/Contests/Practice/Index/202#0
+    // 100/100
 
     using System;
 

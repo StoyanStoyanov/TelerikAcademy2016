@@ -1,6 +1,7 @@
 ﻿namespace Task02SaddyCopper
 {
     // http://bgcoder.com/Contests/Practice/Index/202#2
+    // 90/100
 
     using System;
     using System.Numerics;
@@ -98,7 +99,7 @@
         //{
         //    byte count = 0; do { count++; } while ((n /= 10) >= 1);
 
-        //    return --count;
+        //    return count;
         //}
     }
 }
