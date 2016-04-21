@@ -1,7 +1,7 @@
 ﻿namespace Task02SaddyCopper
 {
     // http://bgcoder.com/Contests/Practice/Index/202#2
-    // 90/100
+    // 90/100 wtf...
 
     using System;
     using System.Numerics;
@@ -11,54 +11,57 @@
     {
         public static void Main()
         {
-            var n = long.Parse(Console.ReadLine());
+            var currentNumber = new StringBuilder(Console.ReadLine());
 
             var currentSumsProduct = new BigInteger(1);
-            var currentNumber = new BigInteger(n);
             var transformationsCount = 0;
-            var output = new StringBuilder();
 
-            while (true)
+            while (currentNumber.Length > 0)
             {
-                currentNumber /= 10;
-                if (currentNumber == 0)
+                currentNumber.Length--;
+
+                var currentSum = GetSumOfDigitsAtEvenPositions(currentNumber);
+                if (currentSum != 0)
                 {
-                    currentNumber = currentSumsProduct;
+                    currentSumsProduct *= currentSum;
+                }
+
+                if (currentNumber.Length == 0)
+                {
+                    currentNumber = new StringBuilder(currentSumsProduct.ToString());
                     transformationsCount++;
                     currentSumsProduct = 1;
 
-                    if (currentNumber / 10 == 0)
+                    if (currentNumber.Length == 1)
                     {
-                        output.AppendFormat("{0}\n{1}", transformationsCount, currentNumber);
+                        Console.WriteLine(transformationsCount);
+                        Console.WriteLine(currentNumber);
                         break;
                     }
-                    else if (transformationsCount == 10)
+
+                    if (transformationsCount == 10)
                     {
-                        output.Append(currentNumber);
+                        Console.WriteLine(currentNumber);
                         break;
                     }
-                    else
-                    {
-                        continue;
-                    }
                 }
-
-                var digits = currentNumber.ToString();
-                var currentSum = 0;
-                for (int i = 0, len = digits.Length; i < len; i++)
-                {
-                    if ((i & 1) == 0)
-                    {
-                        currentSum += int.Parse(digits[i].ToString());
-                    }
-                }
-
-                currentSumsProduct *= currentSum;
             }
-
-            Console.Write(output);
         }
 
+        private static int GetSumOfDigitsAtEvenPositions(StringBuilder numberAsString)
+        {
+            var sum = 0;
+
+            for (int i = 0, len = numberAsString.Length; i < len; i++)
+            {
+                if ((i & 1) == 0)
+                {
+                    sum += int.Parse(numberAsString[i].ToString());
+                }
+            }
+
+            return sum;
+        }
 
         //private static int CalculateSumOfEvenDigits(BigInteger number)
         //{

@@ -1,6 +1,7 @@
 ﻿namespace Task02EncodingSum
 {
     // http://bgcoder.com/Contests/Practice/Index/203#1
+    // 100/100
 
     using System;
 
