@@ -1,4 +1,4 @@
-﻿namespace Task02NightmareOnCodeStreet
+﻿namespace NightmareOnCodeStreet
 {
     // http://bgcoder.com/Contests/Practice/Index/107#1
     // 100/100

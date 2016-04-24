@@ -1,4 +1,4 @@
-﻿namespace Task01TwoFourEight
+﻿namespace TwoFourEight
 {
     // http://bgcoder.com/Contests/Practice/Index/107#0
     // 100/100
