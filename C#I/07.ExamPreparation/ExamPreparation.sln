@@ -25,15 +25,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task03Cube3D", "Task03Cube3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExamDec2013Evening", "ExamDec2013Evening", "{3A444ECB-12E7-499B-A722-1D156ADCF2AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.TwoFourEight", "TwoFourEight\01.TwoFourEight.csproj", "{1F9C83BD-67DC-4789-AEF5-42979C6C32D4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task01TwoFourEight", "TwoFourEight\Task01TwoFourEight.csproj", "{1F9C83BD-67DC-4789-AEF5-42979C6C32D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.NightmareOnCodeStreet", "NightmareOnCodeStreet\02.NightmareOnCodeStreet.csproj", "{90EACDC5-7797-4525-8E7F-4002E7C4CBE9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task02NightmareOnCodeStreet", "NightmareOnCodeStreet\Task02NightmareOnCodeStreet.csproj", "{90EACDC5-7797-4525-8E7F-4002E7C4CBE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigmanation", "Enigmanation\Enigmanation.csproj", "{3F0C1CDE-B6CC-4CB8-96CB-AEE368EB9C88}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task03Enigmanation", "Enigmanation\Task03Enigmanation.csproj", "{3F0C1CDE-B6CC-4CB8-96CB-AEE368EB9C88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfPage", "GameOfPage\GameOfPage.csproj", "{5ECE082F-6D61-4296-8310-FE02E36FB71E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task05GameOfPage", "GameOfPage\Task05GameOfPage.csproj", "{5ECE082F-6D61-4296-8310-FE02E36FB71E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaspichaniaBoats", "KaspichaniaBoats\KaspichaniaBoats.csproj", "{14B6BE2D-F0F6-4E08-9A62-8A660DA56799}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task04KaspichaniaBoats", "KaspichaniaBoats\Task04KaspichaniaBoats.csproj", "{14B6BE2D-F0F6-4E08-9A62-8A660DA56799}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,4 @@
-﻿namespace Enigmanation
+﻿namespace Task03Enigmanation
 {
     // http://bgcoder.com/Contests/Practice/Index/107#2
     // 100/100

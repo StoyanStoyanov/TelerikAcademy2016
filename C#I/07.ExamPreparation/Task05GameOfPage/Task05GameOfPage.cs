@@ -1,4 +1,4 @@
-﻿namespace GameOfPage
+﻿namespace Task05GameOfPage
 {
     // http://bgcoder.com/Contests/Practice/Index/107#4
     // 100/100

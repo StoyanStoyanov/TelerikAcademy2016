@@ -1,4 +1,4 @@
-﻿namespace KaspichaniaBoats
+﻿namespace Task04KaspichaniaBoats
 {
     // http://bgcoder.com/Contests/Practice/Index/107#3
     // 100/100
