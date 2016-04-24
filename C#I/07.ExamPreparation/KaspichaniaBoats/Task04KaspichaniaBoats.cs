@@ -6,7 +6,7 @@
     using System;
     using System.Text;
 
-    public class KaspichaniaBoats
+    public class Task04KaspichaniaBoats
     {
         public static void Main()
         {

@@ -5,7 +5,7 @@
 
     using System;
 
-    public class TwoFourEight
+    public class Task01TwoFourEight
     {
         public static void Main()
         {

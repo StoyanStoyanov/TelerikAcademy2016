@@ -5,7 +5,7 @@
 
     using System;
 
-    public class NightmareOnCodeStreet
+    public class Task02NightmareOnCodeStreet
     {
         public static void Main()
         {

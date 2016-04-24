@@ -5,7 +5,7 @@
 
     using System;
 
-    public class GameOfPage
+    public class Task05GameOfPage
     {
         public static void Main()
         {

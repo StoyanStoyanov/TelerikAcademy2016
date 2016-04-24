@@ -6,7 +6,7 @@
     using System;
     using System.Text;
 
-    public class Enigmanation
+    public class Task03Enigmanation
     {
         public static void Main()
         {
