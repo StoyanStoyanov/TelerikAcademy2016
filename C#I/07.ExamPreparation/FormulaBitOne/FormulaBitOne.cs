@@ -6,72 +6,101 @@
     {
         public static void Main()
         {
-            byte n = 8;
+            var n = 8;
+            var grid = new bool[n, n];
 
-            var grid = new byte[n, n];
-
-            for (byte row = 0; row < n; row++)
+            for (int i = 0; i < n; i++)
             {
-                var bits = Convert.ToString(byte.Parse(Console.ReadLine()), 2).PadLeft(8, '0');
-                for (int col = 0; col < n; col++)
+                var num = byte.Parse(Console.ReadLine());
+                for (int j = 0; j < n; j++)
                 {
-                    grid[row, col] = byte.Parse(bits[col].ToString());
+                    grid[i, n - j - 1] = ((num >> j) & 1) != 0;
                 }
             }
 
             var direction = "south";
-            var carRow = 0;
-            var carCol = 7;
+            var previousDirection = "south";
+            var reachedFinal = false;
+            var trackLength = 0;
             var turnsCount = 0;
+            var row = 0;
+            var col = 7;
 
             while (true)
             {
-                if (direction == "south" && (carRow > n - 1 || grid[carRow, carCol] == 1))
+                if (grid[row, col])
                 {
-                    carRow--;
+                    break;
+                }
 
+                trackLength++;
+
+                if (row == n - 1 && col == 0)
+                {
+                    reachedFinal = true;
+                    break;
+                }
+
+                if (direction == "south" && ((row + 1 > n - 1) || grid[row + 1, col]))
+                {
+                    previousDirection = "south";
                     direction = "west";
                     turnsCount++;
-                    carCol--;
-                }
-                else if (direction == "west" && (carCol < 0 || grid[carRow, carCol] == 1))
-                {
-                    carCol++;
 
+                    if (col - 1 < 0 || grid[row, col - 1])
+                    {
+                        break;
+                    }
+                }
+                else if (direction == "north" && (row - 1 < 0 || grid[row - 1, col]))
+                {
+                    previousDirection = "north";
+                    direction = "west";
+                    turnsCount++;
+
+                    if (col - 1 < 0 || grid[row, col - 1])
+                    {
+                        break;
+                    }
+                }
+                else if (direction == "west" && previousDirection == "south" 
+                     && (col - 1 < 0 || grid[row, col - 1]))
+                {
                     direction = "north";
                     turnsCount++;
-                    carRow--;
-                }
-                else if (direction == "north" && (carRow < 0 || grid[carRow, carCol] == 1))
-                {
-                    carRow++;
 
-                    direction = "west";
+                    if (row - 1 < 0 || grid[row - 1, col])
+                    {
+                        break;
+                    }
+                }
+                else if (direction == "west" && previousDirection == "north" 
+                     && (col - 1 < 0 || grid[row, col - 1]))
+                {
+                    direction = "south";
                     turnsCount++;
-                    carCol--;
+
+                    if (row + 1 > n - 1 || grid[row + 1, col])
+                    {
+                        break;
+                    }
                 }
 
                 switch (direction)
                 {
-                    case "south": carRow++; break;
-                    case "west": carCol--; break;
-                    case "north": carRow--; break;
+                    case "south": row++; break;
+                    case "west": col--; break;
+                    case "north": row--; break;
                 }
             }
 
-           // PrintMatrix(grid);
-        }
-
-        static void PrintMatrix(byte[,] matrix)
-        {
-            for (int row = 0; row < matrix.GetLength(0); row++)
+            if (reachedFinal)
             {
-                for (int col = 0; col < matrix.GetLength(1); col++)
-                {
-                    Console.Write(matrix[row, col]);
-                }
-
-                Console.WriteLine();
+                Console.WriteLine("{0} {1}", trackLength, turnsCount);
+            }
+            else
+            {
+                Console.WriteLine("No {0}", trackLength);
             }
         }
     }
