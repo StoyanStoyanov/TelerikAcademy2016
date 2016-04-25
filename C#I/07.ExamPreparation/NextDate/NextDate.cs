@@ -1,6 +1,7 @@
 ﻿namespace NextDate
 {
     // http://bgcoder.com/Contests/Practice/Index/41#0
+    // 100/100
 
     using System;
 

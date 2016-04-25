@@ -1,5 +1,8 @@
 ﻿namespace TribonacciTriangle
 {
+    // http://bgcoder.com/Contests/Practice/Index/41#1
+    // 100/100
+
     using System;
     using System.Text;
 

@@ -1,5 +1,8 @@
 ﻿namespace FormulaBitOne
 {
+    // http://bgcoder.com/Contests/Practice/Index/41#4
+    // 100/100
+
     using System;
 
     public class FormulaBitOne
