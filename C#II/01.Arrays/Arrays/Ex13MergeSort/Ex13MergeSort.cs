@@ -38,12 +38,14 @@
                 if (left > m)                       arr[i] = copy[right++];
                 else if (right > e)                 arr[i] = copy[left++];
                 else if (copy[left] <= copy[right]) arr[i] = copy[left++];
-                else if (copy[left] > copy[right]) arr[i] = copy[right++];
+                else if (copy[left] > copy[right])  arr[i] = copy[right++];
             }
         }
 
         private static void Sort(int[] arr)
         {
+            // pass through array merging subarrays of size 1.
+            // repeat for subarrays of size 2, 4, 8, 16, ...
             for (int size = 1, n = arr.Length; size < n; size += size)
             {
                 for (int start = 0; start < n - size; start += 2 * size)
