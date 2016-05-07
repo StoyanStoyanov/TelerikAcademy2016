@@ -16,6 +16,20 @@
                 array[i] = int.Parse(Console.ReadLine());
             }
 
+            SelectionSort(ref array);
+
+            var output = new StringBuilder();
+            for (int i = 0; i < n; i++)
+            {
+                output.Append(array[i]);
+                output.AppendLine();
+            }
+
+            Console.Write(output);
+        }
+
+        private static void SelectionSort(ref int[] array)
+        {
             for (int i = array.Length - 1; i >= 0; i--)
             {
                 var maxValue = array[i];
@@ -36,15 +50,6 @@
                     array[i] ^= array[maxIndex];
                 }
             }
-
-            var output = new StringBuilder();
-            for (int i = 0; i < n; i++)
-            {
-                output.Append(array[i]);
-                output.AppendLine();
-            }
-
-            Console.Write(output);
         }
     }
 }
