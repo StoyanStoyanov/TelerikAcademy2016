@@ -1,27 +1,6 @@
 ﻿namespace Ex03CompareCharArrays
 {
-    /*
-        03. Compare char arrays
-
-        Write a program that compares two char arrays lexicographically (letter by letter).
-
-        Input:
-
-        On the first line you will receive the first char array as a string
-        On the second line you will receive the second char array as a string
-
-        Output:
-
-        Print < if the first array is lexicographically smaller
-        Print > if the second array is lexicographically smaller
-        Print = if the arrays are equal
-
-        Constraints:
-
-        1 <= size of arrays <= 128
-        Time limit: 0.1s
-        Memory limit: 16MB
-    */
+    // https://github.com/TelerikAcademy/CSharp-Part-2/tree/master/Topics/01.%20Arrays/homework/03.%20Compare%20char%20arrays
 
     using System;
 
@@ -31,7 +10,6 @@
         {
             var firstString = Console.ReadLine();
             var secondString = Console.ReadLine();
-
             var firstStringLen = firstString.Length;
             var secondStringLen = secondString.Length;
             var length = firstStringLen > secondStringLen ? secondStringLen : firstStringLen;

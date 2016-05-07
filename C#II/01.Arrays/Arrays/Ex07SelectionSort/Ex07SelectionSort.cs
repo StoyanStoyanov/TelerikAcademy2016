@@ -1,31 +1,6 @@
 ﻿namespace Ex07SelectionSort
 {
-    /*
-        07. Selection sort
-
-        Description:
-
-        Sorting an array means to arrange its elements in increasing order.
-        Write a program to sort an array. Use the Selection sort algorithm:
-        Find the smallest element, move it at the first position, 
-        find the smallest from the rest, move it at the second position, etc.
-
-        Input:
-
-        On the first line you will receive the number N
-        On the next N lines the numbers of the array will be given
-
-        Output:
-
-        Print the sorted array
-        Each number should be on a new line
-
-        Constraints:
-
-        1 <= N <= 1024
-        Time limit: 0.1s
-        Memory limit: 16MB
-    */
+    // https://github.com/TelerikAcademy/CSharp-Part-2/tree/master/Topics/01.%20Arrays/homework/07.%20Selection%20sort
 
     using System;
     using System.Text;
@@ -41,29 +16,28 @@
                 array[i] = int.Parse(Console.ReadLine());
             }
 
-            for (int i = n - 1; i >= 0; i--)
+            for (int i = array.Length - 1; i >= 0; i--)
             {
-                var currentMax = array[i];
-                var currentMaxIndex = i;
+                var maxValue = array[i];
+                var maxIndex = i;
                 for (int j = i - 1; j >= 0; j--)
                 {
-                    if (currentMax < array[j])
+                    if (maxValue < array[j])
                     {
-                        currentMax = array[j];
-                        currentMaxIndex = j;
+                        maxValue = array[j];
+                        maxIndex = j;
                     }
                 }
 
-                if (currentMaxIndex != i)
+                if (maxIndex != i)
                 {
-                    array[i] ^= array[currentMaxIndex];
-                    array[currentMaxIndex] ^= array[i];
-                    array[i] ^= array[currentMaxIndex];
+                    array[i] ^= array[maxIndex];
+                    array[maxIndex] ^= array[i];
+                    array[i] ^= array[maxIndex];
                 }
             }
 
             var output = new StringBuilder();
-
             for (int i = 0; i < n; i++)
             {
                 output.Append(array[i]);
