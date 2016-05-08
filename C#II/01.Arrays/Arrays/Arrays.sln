@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex13MergeSort", "Ex13MergeS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex14Quicksort", "Ex14Quicksort\Ex14Quicksort.csproj", "{67DAC171-EB49-4ED8-9103-9FC74271EC42}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex15PrimeNumbers", "Ex15PrimeNumbers\Ex15PrimeNumbers.csproj", "{AD23C87C-6B84-4ED5-A516-F46F77CE3F08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{67DAC171-EB49-4ED8-9103-9FC74271EC42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67DAC171-EB49-4ED8-9103-9FC74271EC42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67DAC171-EB49-4ED8-9103-9FC74271EC42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD23C87C-6B84-4ED5-A516-F46F77CE3F08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD23C87C-6B84-4ED5-A516-F46F77CE3F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD23C87C-6B84-4ED5-A516-F46F77CE3F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD23C87C-6B84-4ED5-A516-F46F77CE3F08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
