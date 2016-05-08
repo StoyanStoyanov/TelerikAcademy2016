@@ -16,7 +16,7 @@
                 array[i] = int.Parse(Console.ReadLine());
             }
 
-            SelectionSort(ref array);
+            SelectionSort(array);
 
             var output = new StringBuilder();
             for (int i = 0; i < n; i++)
@@ -28,7 +28,7 @@
             Console.Write(output);
         }
 
-        private static void SelectionSort(ref int[] array)
+        private static void SelectionSort(int[] array)
         {
             for (int i = array.Length - 1; i >= 0; i--)
             {
