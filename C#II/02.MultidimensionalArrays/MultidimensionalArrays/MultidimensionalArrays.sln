@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultidimensionalArrays", "MultidimensionalArrays\MultidimensionalArrays.csproj", "{9AC4D927-6A10-4669-9FD8-5375F3327098}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex01FillTheMatrix", "Ex01FillTheMatrix\Ex01FillTheMatrix.csproj", "{10784E84-D982-450E-A79B-0A348E2BB60A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex02MaximalSum", "Ex02MaximalSum\Ex02MaximalSum.csproj", "{529119D9-047B-4E23-9758-EA48D5CA52CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex03SequenceInMatrix", "Ex03SequenceInMatrix\Ex03SequenceInMatrix.csproj", "{8475A1F3-124D-4645-9A14-D1DB4FFF196F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9AC4D927-6A10-4669-9FD8-5375F3327098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9AC4D927-6A10-4669-9FD8-5375F3327098}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9AC4D927-6A10-4669-9FD8-5375F3327098}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9AC4D927-6A10-4669-9FD8-5375F3327098}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10784E84-D982-450E-A79B-0A348E2BB60A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10784E84-D982-450E-A79B-0A348E2BB60A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10784E84-D982-450E-A79B-0A348E2BB60A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10784E84-D982-450E-A79B-0A348E2BB60A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{529119D9-047B-4E23-9758-EA48D5CA52CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{529119D9-047B-4E23-9758-EA48D5CA52CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{529119D9-047B-4E23-9758-EA48D5CA52CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{529119D9-047B-4E23-9758-EA48D5CA52CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8475A1F3-124D-4645-9A14-D1DB4FFF196F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8475A1F3-124D-4645-9A14-D1DB4FFF196F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8475A1F3-124D-4645-9A14-D1DB4FFF196F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8475A1F3-124D-4645-9A14-D1DB4FFF196F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
