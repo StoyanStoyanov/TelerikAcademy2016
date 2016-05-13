@@ -12,6 +12,7 @@
             var n = int.Parse(nm[0]);
             var m = int.Parse(nm[1]);
             var matrix = new int[n, m];
+
             for (int row = 0; row < n; row++)
             {
                 var numStrings = Console.ReadLine().Split(' ');
@@ -21,6 +22,7 @@
 
             var bestCount = 0;
             var marked = new bool[n, m];
+
             for (int row = 0; row < n; row++)
             {
                 for (int col = 0; col < m; col++)
