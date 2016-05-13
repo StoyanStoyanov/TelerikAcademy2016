@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex02MaximalSum", "Ex02Maxim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex03SequenceInMatrix", "Ex03SequenceInMatrix\Ex03SequenceInMatrix.csproj", "{8475A1F3-124D-4645-9A14-D1DB4FFF196F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex07LargestAreaInMatrix", "Ex07LargestAreaInMatrix\Ex07LargestAreaInMatrix.csproj", "{6B54247E-2A0A-4B09-B3F1-FE6A73211FB9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8475A1F3-124D-4645-9A14-D1DB4FFF196F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8475A1F3-124D-4645-9A14-D1DB4FFF196F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8475A1F3-124D-4645-9A14-D1DB4FFF196F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B54247E-2A0A-4B09-B3F1-FE6A73211FB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B54247E-2A0A-4B09-B3F1-FE6A73211FB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B54247E-2A0A-4B09-B3F1-FE6A73211FB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B54247E-2A0A-4B09-B3F1-FE6A73211FB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
