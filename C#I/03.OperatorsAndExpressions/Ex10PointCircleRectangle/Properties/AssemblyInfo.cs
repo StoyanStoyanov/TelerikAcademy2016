@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MultidimensionalArrays")]
+[assembly: AssemblyTitle("Ex10PointCircleRectangle")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MultidimensionalArrays")]
+[assembly: AssemblyProduct("Ex10PointCircleRectangle")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9ac4d927-6a10-4669-9fd8-5375f3327098")]
+[assembly: Guid("e45259e3-0a3b-449e-8eea-3e2bc751ebd6")]
 
 // Version information for an assembly consists of the following four values:
 //
