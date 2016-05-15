@@ -19,18 +19,18 @@
             var firstArray = ReadInputArray(firstArraySize);
             var secondArray = ReadInputArray(secondArraySize);
 
-            var resultingArray = GetSumOfArrays(firstArray, secondArray, bestSize);
+            var resultingArray = DigitByDigitSum(firstArray, secondArray, bestSize);
 
             Console.WriteLine(string.Join(" ", resultingArray));
         }
 
-        private static int[] GetSumOfArrays(int[] firstNumberDigits, int[] secondNumberDigits, int bestSize)
+        private static int[] DigitByDigitSum(int[] firstNumberDigits, int[] secondNumberDigits, int bestSize)
         {
-            var result = new List<int>();
+            var sumAsDigits = new List<int>();
          
-            for (int d = 0, inMind = 0; d < bestSize; d++)
+            for (int d = 0, carry = 0; d < bestSize; d++)
             {
-                var currentDigitsSum = inMind;
+                var currentDigitsSum = carry;
 
                 if (d < firstNumberDigits.Length)
                 {
@@ -45,17 +45,17 @@
                 if (currentDigitsSum >= 10)
                 {
                     currentDigitsSum %= 10;
-                    inMind = 1;
+                    carry = 1;
                 }
                 else
                 {
-                    inMind = 0;
+                    carry = 0;
                 }
 
-                result.Add(currentDigitsSum);
+                sumAsDigits.Add(currentDigitsSum);
             }
 
-            return result.ToArray();
+            return sumAsDigits.ToArray();
         }
 
         private static int[] ReadInputArray(int size)
