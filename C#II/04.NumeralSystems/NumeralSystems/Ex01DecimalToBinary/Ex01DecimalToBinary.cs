@@ -1,5 +1,7 @@
 ﻿namespace Ex01DecimalToBinary
 {
+    // https://github.com/TelerikAcademy/CSharp-Part-2/tree/master/Topics/04.%20Numeral-Systems/homework/01.%20Decimal%20to%20binary
+
     using System;
     using System.Text;
 
