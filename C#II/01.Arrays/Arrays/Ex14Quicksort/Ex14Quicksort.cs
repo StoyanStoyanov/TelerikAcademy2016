@@ -118,9 +118,12 @@
             // modern version of the Fisher–Yates shuffle
             // algorithm of Richard Durstenfeld
             // https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+
+            var gen = new Random();
+
             for (int i = arr.Length - 1; i >= 0; i--)
             {
-                var randIndex = new Random().Next(0, i + 1);
+                var randIndex = gen.Next(0, i + 1);
                 Swap(ref arr[randIndex], ref arr[i]);
             }
         }
