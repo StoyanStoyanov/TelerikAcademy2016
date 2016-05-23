@@ -7,60 +7,34 @@
     {
         public static void Main()
         {
-            var text = Console.ReadLine();
-            var tagStart = "<a href=";
-
+            var txt = Console.ReadLine();
+            var x = "<a href=";
             var url = new StringBuilder();
-            var innerText = new StringBuilder();
-            var output = new StringBuilder();
+            var inf = new StringBuilder();
+            var r = new StringBuilder();
 
-            for (int i = 0, j = 0; i < text.Length; i++)
-            {
+            for (int i = 0, j = 0; i < txt.Length; i++) {
                 var match = true;
-
-                for (j = i; j < i + tagStart.Length; j++)
-                {
-                    if (char.ToLowerInvariant(text[j]) != tagStart[j - i])
-                    {
+                for (j = i; j < i + x.Length; j++) { 
+                    if (char.ToLower(txt[j]) != x[j - i]) {
                         match = false;
                         break;
                     }
                 }
-
-                if (match)
-                {
-                    i = j;
-
-                    while (text[i++] != '"');
-                    while (text[i] != '"')
-                    {
-                        url.Append(text[i++]);
-                    }
-
-                    while (text[i++] != '>');
-                    while (text[i] != '<')
-                    {
-                        innerText.Append(text[i++]);
-                    }
-
-                    output.Append('[');
-                    output.Append(innerText);
-                    output.Append(']');
-
-                    output.Append('(');
-                    output.Append(url);
-                    output.Append(')');
-
-                    innerText.Clear();
+                if (match) {  
+                    while (txt[j++] != '"');
+                    while (txt[j] != '"') url.Append(txt[j++]);
+                    while (txt[j++] != '>');
+                    while (txt[j] != '<') inf.Append(txt[j++]);
+                    while (txt[j++] != '>');
+                    r.AppendFormat("[{0}]({1})", inf, url);
+                    inf.Clear();
                     url.Clear();
-
-                    while (text[i++] != '>');
+                    i = j;
                 }
-
-                output.Append(text[i]);
+                r.Append(txt[i]);
             }
-
-            Console.WriteLine(output);
+            Console.Write(r);
         }
     }
 }
