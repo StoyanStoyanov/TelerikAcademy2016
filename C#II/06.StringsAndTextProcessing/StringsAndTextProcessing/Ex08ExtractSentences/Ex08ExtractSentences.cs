@@ -7,7 +7,7 @@
     {
         public static void Main()
         {
-            var word = Console.ReadLine().ToUpper();
+            var word = Console.ReadLine(); // ToUpper();
             var text = "." + Console.ReadLine();
             var sb = new StringBuilder();
 
@@ -17,7 +17,8 @@
 
                 for (j = i; j < i + word.Length; j++)
                 {
-                    if (char.ToUpper(text[j]) != word[j - i])
+                    // char.ToUpper(text[j]) != word[j - i]
+                    if (text[j] != word[j - i])
                     {
                         match = false;
                         break;
@@ -27,10 +28,10 @@
                 if (match && !char.IsLetter(text[i - 1]) 
                           && !char.IsLetter(text[j]))
                 {   // go back to sentence start
-                    while (text[--i] != '.'); 
+                    while (text[--i] != '.');
                     while (text[++i] != '.') 
                         sb.Append(text[i]);
-                    sb.Append('.');
+                    sb.Append(". "); // sb.Append('.');
                 }
             }
 

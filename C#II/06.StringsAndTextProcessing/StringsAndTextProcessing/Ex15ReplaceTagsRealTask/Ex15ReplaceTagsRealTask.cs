@@ -7,34 +7,53 @@
     {
         public static void Main()
         {
-            var txt = Console.ReadLine();
+            var text = Console.ReadLine();
             var x = "<a href=";
-            var url = new StringBuilder();
-            var inf = new StringBuilder();
-            var r = new StringBuilder();
 
-            for (int i = 0, j = 0; i < txt.Length; i++) {
+            var url = new StringBuilder();
+            var info = new StringBuilder();
+            var result = new StringBuilder();
+
+            for (int i = 0, j = 0; i < text.Length; i++)
+            {
                 var match = true;
-                for (j = i; j < i + x.Length; j++) { 
-                    if (char.ToLower(txt[j]) != x[j - i]) {
+
+                for (j = i; j < i + x.Length; j++)
+                { 
+                    if (char.ToLower(text[j]) != x[j - i])
+                    {
                         match = false;
                         break;
                     }
                 }
-                if (match) {  
-                    while (txt[j++] != '"');
-                    while (txt[j] != '"') url.Append(txt[j++]);
-                    while (txt[j++] != '>');
-                    while (txt[j] != '<') inf.Append(txt[j++]);
-                    while (txt[j++] != '>');
-                    r.AppendFormat("[{0}]({1})", inf, url);
-                    inf.Clear();
+
+                if (match)
+                {  
+                    while (text[j++] != '"');
+                    while (text[j] != '"')
+                    {
+                        url.Append(text[j++]);
+                    }
+
+                    while (text[j++] != '>');
+                    while (text[j] != '<')
+                    {
+                        info.Append(text[j++]);
+                    }
+
+                    while (text[j++] != '>');
+
+                    result.AppendFormat("[{0}]({1})", info, url);
+                    info.Clear();
                     url.Clear();
+
                     i = j;
                 }
-                r.Append(txt[i]);
+
+                result.Append(text[i]);
             }
-            Console.Write(r);
+
+            Console.Write(result);
         }
     }
 }
