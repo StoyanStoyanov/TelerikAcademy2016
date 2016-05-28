@@ -1,5 +1,7 @@
 ﻿namespace Ex10UnicodeCharacters
 {
+    // https://github.com/TelerikAcademy/CSharp-Part-2/tree/master/Topics/06.%20Strings-and-Text-Processing/homework/10.%20Unicode%20characters
+
     using System;
     using System.Text;
 

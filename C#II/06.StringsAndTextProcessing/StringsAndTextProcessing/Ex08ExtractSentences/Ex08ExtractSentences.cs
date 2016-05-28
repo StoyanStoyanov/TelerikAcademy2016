@@ -36,7 +36,7 @@
                     // get sentence
                     while (text[i] != '.') 
                         s.Append(text[i++]);
-                    // next trim end
+                    // trim end
                     while (s[s.Length - 1] == ' ')
                         s.Length--;
                     s.Append(". ");
