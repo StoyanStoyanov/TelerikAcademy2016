@@ -53,7 +53,7 @@
                 result.Append(text[i]);
             }
 
-            Console.Write(result);
+            Console.WriteLine(result);
         }
     }
 }
