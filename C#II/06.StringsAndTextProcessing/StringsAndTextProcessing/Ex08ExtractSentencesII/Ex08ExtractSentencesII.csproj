@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{52321178-EB09-43F9-8C6D-3428E32792DF}</ProjectGuid>
+    <ProjectGuid>{D5E6AB84-177D-4C0C-A7CA-FEE3DE70D239}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ex15ReplaceTags</RootNamespace>
-    <AssemblyName>Ex15ReplaceTags</AssemblyName>
+    <RootNamespace>Ex08ExtractSentencesII</RootNamespace>
+    <AssemblyName>Ex08ExtractSentencesII</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ex15ReplaceTags.cs" />
+    <Compile Include="Ex08ExtractSentencesII.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StringBuilderConsole\ReadLine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

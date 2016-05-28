@@ -1,5 +1,7 @@
 ﻿namespace Ex23SeriesOfLetters
 {
+    // https://github.com/TelerikAcademy/CSharp-Part-2/tree/master/Topics/06.%20Strings-and-Text-Processing/homework/23.%20Series%20of%20letters
+
     using System;
     using System.Text;
 

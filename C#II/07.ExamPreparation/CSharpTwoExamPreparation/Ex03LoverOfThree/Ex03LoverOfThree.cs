@@ -1,154 +1,90 @@
 ﻿namespace Ex03LoverOfThree
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
 
     public class Ex03LoverOfThree
     {
         public static void Main()
         {
-            var dimensions = Console.ReadLine().Split(' ');
-            var rows = int.Parse(dimensions[0]);
-            var cols = int.Parse(dimensions[1]);
-            var field = new int[rows, cols];
-            var visited = new bool[rows, cols];
+            var dims = Console.ReadLine().Split(' ');
+            var rows = int.Parse(dims[0]);
+            var cols = int.Parse(dims[1]);
 
-            for (int row = rows - 1; row >= 0; row--)
+            var field = new int[rows + 2, cols + 2];
+            // set field with - 1, including border
+            for (int r = 0; r < rows + 2; r++)
             {
-                for (int col = 0, num = (rows - row - 1) * 3; col < cols; col++, num += 3)
+                for (int c = 0; c < cols + 2; c++)
                 {
-                    field[row, col] = num;
+                    field[r, c] = -1;
+                }
+            }
+            // set field with values, exc border
+            for (int r = rows - 1; r >= 0; r--)
+            {
+                var value = (rows - r - 1) * 3;
+                for (int c = 0; c < cols; c++, value += 3)
+                {
+                    field[r + 1, c + 1] = value;
                 }
             }
 
-            PrintMatrix(field);
-
+            var visited = new bool[rows + 2, cols + 2];
             var n = int.Parse(Console.ReadLine());
-            var directions = new string[n];
-            var moves = new int[n];
-
-            var movesByDirection = new Dictionary<string, Action>();
-  
+            string[] dm;
+            string direction;
+            int moves, pRow, pCol, row = rows, col = 1, sum = 0;
+            // no need to visit start cell, as its value is 0
             for (int i = 0; i < n; i++)
             {
-                var pair = Console.ReadLine().Split(' ');
-                directions[i] = pair[0];
-                moves[i] = int.Parse(pair[1]);
-            }
-
-            var sRow = rows - 1;
-            var sCol = 0;
-            long sum = 0;
-
-            for (int i = 0; i < directions.Length; i++)
-            {
-                switch (directions[i])
+                dm = Console.ReadLine().Split();
+                direction = dm[0];
+                moves = int.Parse(dm[1]);
+                for (int m = 0; m < moves - 1; m++)
                 {
-                    case "RU":
-                    case "UR":
-                        for (int j = 0; j < moves[i]; j++)
-                        {
-                            GoUpRight(ref sRow, ref sCol, 0, cols - 1);
-                            if (!visited[sRow, sCol])
-                            {
-                                sum += field[sRow, sCol];
-                                visited[sRow, sCol] = true;
-                            }
-                        }
+                    pRow = row;
+                    pCol = col;
+
+                    switch (direction)
+                    {
+                        case "RU":
+                        case "UR":
+                            row--;
+                            col++;
+                            break;
+                        case "LU":
+                        case "UL":
+                            row--;
+                            col--;
+                            break;
+                        case "DL":
+                        case "LD":
+                            row++;
+                            col--;
+                            break;
+                        case "RD":
+                        case "DR":
+                            row++;
+                            col++;
+                            break;
+                    }
+
+                    if (field[row, col] == -1)
+                    {
+                        row = pRow;
+                        col = pCol;
                         break;
-                    case "LU":
-                    case "UL":
-                        for (int j = 0; j < moves[i]; j++)
-                        {
-                            GoUpLeft(ref sRow, ref sCol, 0, 0);
-                            if (!visited[sRow, sCol])
-                            {
-                                sum += field[sRow, sCol];
-                                visited[sRow, sCol] = true;
-                            }
-                        }
-                        break;
-                    case "DL":
-                    case "LD":
-                        for (int j = 0; j < moves[i]; j++)
-                        {
-                            GoDownLeft(ref sRow, ref sCol, rows - 1, 0);
-                            if (!visited[sRow, sCol])
-                            {
-                                sum += field[sRow, sCol];
-                                visited[sRow, sCol] = true;
-                            }
-                        }
-                        break;
-                    case "RD":
-                    case "DR":
-                        for (int j = 0; j < moves[i]; j++)
-                        {
-                            GoDownRight(ref sRow, ref sCol, rows - 1, cols - 1);
-                            if (!visited[sRow, sCol])
-                            {
-                                sum += field[sRow, sCol];
-                                visited[sRow, sCol] = true;
-                            }
-                        }
-                        break;
+                    }
+
+                    if (!visited[row, col])
+                    {
+                        visited[row, col] = true;
+                        sum += field[row, col];
+                    }
                 }
             }
 
             Console.WriteLine(sum);
-        }
-
-        private static void GoUpRight(ref int row, ref int col, int minRow, int maxCol)
-        {
-            if (row > minRow && col < maxCol)
-            {
-                row--;
-                col++;
-            }
-        }
-
-        private static void GoDownRight(ref int row, ref int col, int maxRow, int maxCol)
-        {
-            if (row < maxRow && col < maxCol)
-            {
-                row++;
-                col++;
-            }
-        }
-
-        private static void GoDownLeft(ref int row, ref int col, int maxRow, int minCol)
-        {
-            if (row < maxRow && col > minCol)
-            {
-                row++;
-                col--;
-            }
-        }
-
-        private static void GoUpLeft(ref int row, ref int col, int minRow, int minCol)
-        {
-            if (row > minRow && col > minCol)
-            {
-                row--;
-                col--;
-            }
-        }
-
-        private static void PrintMatrix(int[,] matrix)
-        {
-            var output = new StringBuilder();
-            for (int row = 0; row < matrix.GetLength(0); row++)
-            {
-                for (int col = 0; col < matrix.GetLength(1); col++)
-                {
-                    output.AppendFormat("{0, 3}", matrix[row, col]);
-                }
-
-                output.AppendLine();
-            }
-
-            Console.WriteLine(output);
         }
     }
 }

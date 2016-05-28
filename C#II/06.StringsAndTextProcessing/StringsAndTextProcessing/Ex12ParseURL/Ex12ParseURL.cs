@@ -1,5 +1,7 @@
 ﻿namespace Ex12ParseURL
 {
+    // https://github.com/TelerikAcademy/CSharp-Part-2/tree/master/Topics/06.%20Strings-and-Text-Processing/homework/12.%20Parse%20URL
+
     using System;
 
     public class Ex12ParseURL
