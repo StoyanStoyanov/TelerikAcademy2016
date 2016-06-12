@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex03Patterns", "Ex03Pattern
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex04VariableLengthCoding", "Ex04VariableLengthCoding\Ex04VariableLengthCoding.csproj", "{35A4DF40-6DF2-46A9-99DD-65174E05D3BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex01MultiverseCommunication", "Ex01MultiverseCommunication\Ex01MultiverseCommunication.csproj", "{3FB0A193-1B01-4790-A2EE-B300855FB72A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex02MagicWords", "Ex02MagicWords\Ex02MagicWords.csproj", "{34849E19-1958-40B6-879E-E8C8C3AB408C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{35A4DF40-6DF2-46A9-99DD-65174E05D3BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35A4DF40-6DF2-46A9-99DD-65174E05D3BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35A4DF40-6DF2-46A9-99DD-65174E05D3BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FB0A193-1B01-4790-A2EE-B300855FB72A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FB0A193-1B01-4790-A2EE-B300855FB72A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FB0A193-1B01-4790-A2EE-B300855FB72A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FB0A193-1B01-4790-A2EE-B300855FB72A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34849E19-1958-40B6-879E-E8C8C3AB408C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34849E19-1958-40B6-879E-E8C8C3AB408C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34849E19-1958-40B6-879E-E8C8C3AB408C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34849E19-1958-40B6-879E-E8C8C3AB408C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
