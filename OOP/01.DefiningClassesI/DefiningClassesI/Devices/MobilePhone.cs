@@ -56,11 +56,6 @@
             //return copy;
         }
 
-        internal void DeleteCall(Func<Array, object, int> indexOf)
-        {
-            throw new NotImplementedException();
-        }
-
         public string GetCallHistoryInfo()
         {
             return string.Join("\n", this.callHistory);
