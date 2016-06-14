@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class Call : IComparable
+    public class Call : IComparable<Call>
     {
         public Call(string number, DateTime startTime, uint duration)
         {
@@ -25,16 +25,9 @@
             }
         }
 
-        public int CompareTo(object obj)
+        public int CompareTo(Call other)
         {
-            var otherCall = obj as Call;
-
-            if (otherCall == null)
-            {
-                throw new ArgumentException();
-            }
-
-            return this.Duration.CompareTo(otherCall.Duration);
+            return this.Duration.CompareTo(other.Duration);
         }
 
         public Call Copy()
