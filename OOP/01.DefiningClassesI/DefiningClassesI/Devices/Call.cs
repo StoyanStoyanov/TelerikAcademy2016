@@ -6,8 +6,8 @@
     {
         public Call(string number, DateTime startTime, uint duration)
         {
-            this.StartTime = startTime;
             this.Number = number;
+            this.StartTime = startTime;
             this.Duration = duration;
         }
 
