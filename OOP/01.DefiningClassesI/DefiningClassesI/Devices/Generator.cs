@@ -5,10 +5,6 @@
 
     public static class Generator
     {
-        /*
-         *             Random gen = new Random();
-
-         **/
         private static readonly Random gen = new Random();
 
         public static DateTime GetRandomDateTime(DateTime start, DateTime end)
