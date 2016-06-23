@@ -83,7 +83,7 @@
             Console.WriteLine();
 
             // Merge the two lists
-            var humans = students.Concat<Human>(workers);
+            var humans = students.Concat<Human>(workers); 
 
             // Sort the resulting IEnumerable<Human> by first name and then by last name
             var sortedHumans = humans.OrderBy(h => h.FirstName).ThenBy(h => h.LastName);

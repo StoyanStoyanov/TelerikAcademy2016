@@ -4,7 +4,8 @@
 
     public class Frog : Animal
     {
-        public Frog(string name, byte age, Sex sex) : base(name, age, sex)
+        public Frog(string name, byte age, Sex sex) 
+            : base(name, age, sex)
         {
         }
 
