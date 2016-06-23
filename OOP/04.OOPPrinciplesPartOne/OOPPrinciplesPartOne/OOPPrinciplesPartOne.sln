@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex02HumanHierarchy", "Ex02HumanHierarchy\Ex02HumanHierarchy.csproj", "{A63B9314-3A66-4175-8139-43D166972E26}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex03AnimalsHierarchy", "Ex03AnimalsHierarchy\Ex03AnimalsHierarchy.csproj", "{83537DE7-0664-4F86-9C0B-C4994E347F7A}"

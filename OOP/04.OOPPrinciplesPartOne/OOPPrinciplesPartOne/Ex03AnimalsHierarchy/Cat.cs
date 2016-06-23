@@ -6,6 +6,7 @@
     {
         public Cat(string name, byte age, Sex sex) : base(name, age, sex)
         {
+        
         }
 
         public override void ProduceSound()
