@@ -23,7 +23,7 @@
             // Create a list of 10 students
             var students = new List<Student>() 
             { 
-                new Student("Stoyan", "Stoyanov", 5.50M),
+                new Student("Pesho", "Stoyanov", 5.50M),
                 new Student("Atanas", "Mavrodiev", 4.50M),
                 new Student("Anna", "Malakova", 5.30M),
                 new Student("Dimitar", "Totev", 3.50M),
